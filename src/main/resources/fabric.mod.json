@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "teapot_cosmetics",
+  "version": "${version}",
+  "name": "Teapot Cosmetics",
+  "description": "Cosmetic items for Sidetopia / Project: Teapot.",
+  "authors": [
+    "Me"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+  "license": "CC0-1.0",
+  "icon": "assets/teapot_cosmetics/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.sidetopia.cosmetics.TeapotCosmetics"
+    ]
+  },
+  "mixins": [
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.5",
+    "minecraft": "~1.21.1",
+    "java": ">=21",
+    "fabric-api": "*",
+    "polymer-core": "*",
+    "filament": "*"
+  }
+}
