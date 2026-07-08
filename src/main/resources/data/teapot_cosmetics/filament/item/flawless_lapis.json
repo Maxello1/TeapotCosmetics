@@ -1,0 +1,12 @@
+{
+  "id": "teapot_cosmetics:flawless_lapis",
+  "vanillaItem": "minecraft:lapis_lazuli",
+  "itemResource": {
+    "models": {
+      "default": "minecraft:item/sidetopia/gems/lapis"
+    }
+  },
+  "components": {
+    "minecraft:custom_name": "{\"text\":\"Flawless Lapis\",\"italic\":false}"
+  }
+}

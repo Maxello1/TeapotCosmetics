@@ -1,0 +1,12 @@
+{
+  "id": "teapot_cosmetics:good_rod",
+  "vanillaItem": "minecraft:fishing_rod",
+  "itemResource": {
+    "models": {
+      "default": "minecraft:item/sidetopia/fishing_rods/good_rod"
+    }
+  },
+  "components": {
+    "minecraft:custom_name": "{\"text\":\"Good Rod\",\"italic\":false}"
+  }
+}

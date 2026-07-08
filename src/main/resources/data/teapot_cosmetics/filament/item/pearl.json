@@ -1,0 +1,12 @@
+{
+  "id": "teapot_cosmetics:pearl",
+  "vanillaItem": "minecraft:lapis_lazuli",
+  "itemResource": {
+    "models": {
+      "default": "minecraft:item/sidetopia/gems/pearl"
+    }
+  },
+  "components": {
+    "minecraft:custom_name": "{\"text\":\"Pearl\",\"italic\":false}"
+  }
+}

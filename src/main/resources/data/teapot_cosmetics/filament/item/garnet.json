@@ -1,0 +1,12 @@
+{
+  "id": "teapot_cosmetics:garnet",
+  "vanillaItem": "minecraft:lapis_lazuli",
+  "itemResource": {
+    "models": {
+      "default": "minecraft:item/sidetopia/gems/garnet"
+    }
+  },
+  "components": {
+    "minecraft:custom_name": "{\"text\":\"Garnet\",\"italic\":false}"
+  }
+}

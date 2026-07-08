@@ -1,0 +1,12 @@
+{
+  "id": "teapot_cosmetics:lance",
+  "vanillaItem": "minecraft:iron_axe",
+  "itemResource": {
+    "models": {
+      "default": "minecraft:item/sidetopia/lance"
+    }
+  },
+  "components": {
+    "minecraft:custom_name": "{\"text\":\"Lance\",\"italic\":false}"
+  }
+}

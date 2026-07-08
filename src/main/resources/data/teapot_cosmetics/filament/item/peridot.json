@@ -1,0 +1,12 @@
+{
+  "id": "teapot_cosmetics:peridot",
+  "vanillaItem": "minecraft:lapis_lazuli",
+  "itemResource": {
+    "models": {
+      "default": "minecraft:item/sidetopia/gems/peridot"
+    }
+  },
+  "components": {
+    "minecraft:custom_name": "{\"text\":\"Peridot\",\"italic\":false}"
+  }
+}

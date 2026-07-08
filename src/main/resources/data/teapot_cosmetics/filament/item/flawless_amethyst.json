@@ -1,0 +1,12 @@
+{
+  "id": "teapot_cosmetics:flawless_amethyst",
+  "vanillaItem": "minecraft:lapis_lazuli",
+  "itemResource": {
+    "models": {
+      "default": "minecraft:item/sidetopia/gems/amethyst"
+    }
+  },
+  "components": {
+    "minecraft:custom_name": "{\"text\":\"Flawless Amethyst\",\"italic\":false}"
+  }
+}

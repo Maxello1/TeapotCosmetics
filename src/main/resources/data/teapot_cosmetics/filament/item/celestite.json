@@ -1,0 +1,12 @@
+{
+  "id": "teapot_cosmetics:celestite",
+  "vanillaItem": "minecraft:lapis_lazuli",
+  "itemResource": {
+    "models": {
+      "default": "minecraft:item/sidetopia/gems/celestite"
+    }
+  },
+  "components": {
+    "minecraft:custom_name": "{\"text\":\"Celestite\",\"italic\":false}"
+  }
+}

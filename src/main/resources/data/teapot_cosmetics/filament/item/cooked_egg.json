@@ -1,0 +1,12 @@
+{
+  "id": "teapot_cosmetics:cooked_egg",
+  "vanillaItem": "minecraft:cooked_cod",
+  "itemResource": {
+    "models": {
+      "default": "minecraft:item/sidetopia/cooked_egg"
+    }
+  },
+  "components": {
+    "minecraft:custom_name": "{\"text\":\"Cooked Egg\",\"italic\":false}"
+  }
+}

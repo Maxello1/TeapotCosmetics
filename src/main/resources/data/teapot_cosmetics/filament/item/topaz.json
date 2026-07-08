@@ -1,0 +1,12 @@
+{
+  "id": "teapot_cosmetics:topaz",
+  "vanillaItem": "minecraft:lapis_lazuli",
+  "itemResource": {
+    "models": {
+      "default": "minecraft:item/sidetopia/gems/topaz"
+    }
+  },
+  "components": {
+    "minecraft:custom_name": "{\"text\":\"Topaz\",\"italic\":false}"
+  }
+}

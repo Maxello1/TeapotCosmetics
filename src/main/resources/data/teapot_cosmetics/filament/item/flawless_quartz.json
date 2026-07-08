@@ -1,0 +1,12 @@
+{
+  "id": "teapot_cosmetics:flawless_quartz",
+  "vanillaItem": "minecraft:lapis_lazuli",
+  "itemResource": {
+    "models": {
+      "default": "minecraft:item/sidetopia/gems/quartz"
+    }
+  },
+  "components": {
+    "minecraft:custom_name": "{\"text\":\"Flawless Quartz\",\"italic\":false}"
+  }
+}

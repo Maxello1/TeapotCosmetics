@@ -1,0 +1,12 @@
+{
+  "id": "teapot_cosmetics:strong_bow",
+  "vanillaItem": "minecraft:bow",
+  "itemResource": {
+    "models": {
+      "default": "minecraft:item/sidetopia/strong_bow/strong_bow"
+    }
+  },
+  "components": {
+    "minecraft:custom_name": "{\"text\":\"Strong Bow\",\"italic\":false}"
+  }
+}

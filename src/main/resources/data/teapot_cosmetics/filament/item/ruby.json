@@ -1,0 +1,12 @@
+{
+  "id": "teapot_cosmetics:ruby",
+  "vanillaItem": "minecraft:lapis_lazuli",
+  "itemResource": {
+    "models": {
+      "default": "minecraft:item/sidetopia/gems/ruby"
+    }
+  },
+  "components": {
+    "minecraft:custom_name": "{\"text\":\"Ruby\",\"italic\":false}"
+  }
+}

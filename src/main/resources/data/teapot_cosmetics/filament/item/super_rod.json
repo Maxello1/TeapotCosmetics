@@ -1,0 +1,12 @@
+{
+  "id": "teapot_cosmetics:super_rod",
+  "vanillaItem": "minecraft:fishing_rod",
+  "itemResource": {
+    "models": {
+      "default": "minecraft:item/sidetopia/fishing_rods/super_rod"
+    }
+  },
+  "components": {
+    "minecraft:custom_name": "{\"text\":\"Super Rod\",\"italic\":false}"
+  }
+}

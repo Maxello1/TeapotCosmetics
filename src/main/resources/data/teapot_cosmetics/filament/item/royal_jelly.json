@@ -1,0 +1,12 @@
+{
+  "id": "teapot_cosmetics:royal_jelly",
+  "vanillaItem": "minecraft:honey_bottle",
+  "itemResource": {
+    "models": {
+      "default": "minecraft:item/sidetopia/royal_jelly"
+    }
+  },
+  "components": {
+    "minecraft:custom_name": "{\"text\":\"Royal Jelly\",\"italic\":false}"
+  }
+}

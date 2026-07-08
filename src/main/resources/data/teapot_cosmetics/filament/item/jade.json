@@ -1,0 +1,12 @@
+{
+  "id": "teapot_cosmetics:jade",
+  "vanillaItem": "minecraft:lapis_lazuli",
+  "itemResource": {
+    "models": {
+      "default": "minecraft:item/sidetopia/gems/jade"
+    }
+  },
+  "components": {
+    "minecraft:custom_name": "{\"text\":\"Jade\",\"italic\":false}"
+  }
+}

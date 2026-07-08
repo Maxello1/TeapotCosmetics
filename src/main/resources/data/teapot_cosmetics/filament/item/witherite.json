@@ -1,0 +1,12 @@
+{
+  "id": "teapot_cosmetics:witherite",
+  "vanillaItem": "minecraft:lapis_lazuli",
+  "itemResource": {
+    "models": {
+      "default": "minecraft:item/sidetopia/gems/witherite"
+    }
+  },
+  "components": {
+    "minecraft:custom_name": "{\"text\":\"Witherite\",\"italic\":false}"
+  }
+}

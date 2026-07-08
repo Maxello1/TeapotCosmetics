@@ -1,0 +1,12 @@
+{
+  "id": "teapot_cosmetics:flawless_diamond",
+  "vanillaItem": "minecraft:lapis_lazuli",
+  "itemResource": {
+    "models": {
+      "default": "minecraft:item/sidetopia/gems/diamond"
+    }
+  },
+  "components": {
+    "minecraft:custom_name": "{\"text\":\"Flawless Diamond\",\"italic\":false}"
+  }
+}

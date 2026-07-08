@@ -1,0 +1,12 @@
+{
+  "id": "teapot_cosmetics:turquoise",
+  "vanillaItem": "minecraft:lapis_lazuli",
+  "itemResource": {
+    "models": {
+      "default": "minecraft:item/sidetopia/gems/turquoise"
+    }
+  },
+  "components": {
+    "minecraft:custom_name": "{\"text\":\"Turquoise\",\"italic\":false}"
+  }
+}

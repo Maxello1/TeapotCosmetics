@@ -1,0 +1,12 @@
+{
+  "id": "teapot_cosmetics:amber",
+  "vanillaItem": "minecraft:lapis_lazuli",
+  "itemResource": {
+    "models": {
+      "default": "minecraft:item/sidetopia/gems/amber"
+    }
+  },
+  "components": {
+    "minecraft:custom_name": "{\"text\":\"Amber\",\"italic\":false}"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "item/fishing_rod",
+  "textures": {
+    "layer0": "item/sidetopia/fishing_rods/good_rod_cast"
+  }
+}

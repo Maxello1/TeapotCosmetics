@@ -1,0 +1,12 @@
+{
+  "id": "teapot_cosmetics:rose_quartz",
+  "vanillaItem": "minecraft:lapis_lazuli",
+  "itemResource": {
+    "models": {
+      "default": "minecraft:item/sidetopia/gems/rose_quartz"
+    }
+  },
+  "components": {
+    "minecraft:custom_name": "{\"text\":\"Rose Quartz\",\"italic\":false}"
+  }
+}

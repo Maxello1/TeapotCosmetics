@@ -1,0 +1,12 @@
+{
+  "id": "teapot_cosmetics:aquamarine",
+  "vanillaItem": "minecraft:lapis_lazuli",
+  "itemResource": {
+    "models": {
+      "default": "minecraft:item/sidetopia/gems/aquamarine"
+    }
+  },
+  "components": {
+    "minecraft:custom_name": "{\"text\":\"Aquamarine\",\"italic\":false}"
+  }
+}

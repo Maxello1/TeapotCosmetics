@@ -1,0 +1,12 @@
+{
+  "id": "teapot_cosmetics:beryl",
+  "vanillaItem": "minecraft:lapis_lazuli",
+  "itemResource": {
+    "models": {
+      "default": "minecraft:item/sidetopia/gems/beryl"
+    }
+  },
+  "components": {
+    "minecraft:custom_name": "{\"text\":\"Beryl\",\"italic\":false}"
+  }
+}

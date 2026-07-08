@@ -1,0 +1,6 @@
+{
+  "parent": "item/bow",
+  "textures": {
+    "layer0": "item/sidetopia/strong_bow/strong_bow_pulling_1"
+  }
+}

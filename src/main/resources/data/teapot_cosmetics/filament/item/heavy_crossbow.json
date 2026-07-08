@@ -1,0 +1,12 @@
+{
+  "id": "teapot_cosmetics:heavy_crossbow",
+  "vanillaItem": "minecraft:crossbow",
+  "itemResource": {
+    "models": {
+      "default": "minecraft:item/sidetopia/heavy_crossbow/heavy_crossbow_standby"
+    }
+  },
+  "components": {
+    "minecraft:custom_name": "{\"text\":\"Heavy Crossbow\",\"italic\":false}"
+  }
+}
