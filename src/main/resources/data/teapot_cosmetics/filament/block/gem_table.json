@@ -1,8 +1,11 @@
 {
   "id": "teapot_cosmetics:gem_table",
+  "vanillaBlock": "minecraft:note_block",
   "group": "minecraft:functional",
   "blockResource": {
-    "model": "teapot_cosmetics:block/gem_table"
+    "models": {
+      "default": "teapot_cosmetics:block/gem_table"
+    }
   },
   "itemResource": {
     "models": {
