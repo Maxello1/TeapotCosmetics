@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "teapot_cosmetics:block/gem_table_top",
+    "down": "teapot_cosmetics:block/gem_table_bottom",
+    "up": "teapot_cosmetics:block/gem_table_top",
+    "north": "teapot_cosmetics:block/gem_table_front",
+    "east": "teapot_cosmetics:block/gem_table_side",
+    "south": "teapot_cosmetics:block/gem_table_side",
+    "west": "teapot_cosmetics:block/gem_table_side"
+  }
+}

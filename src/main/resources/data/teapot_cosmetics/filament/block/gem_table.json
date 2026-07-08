@@ -1,0 +1,21 @@
+{
+  "id": "teapot_cosmetics:gem_table",
+  "group": "minecraft:functional",
+  "blockResource": {
+    "models": {
+      "default": "teapot_cosmetics:block/gem_table"
+    }
+  },
+  "itemResource": {
+    "models": {
+      "default": "teapot_cosmetics:item/gem_table"
+    }
+  },
+  "properties": {
+    "destroyTime": 2.5,
+    "requiresTool": true
+  },
+  "components": {
+    "minecraft:custom_name": "{\"text\":\"Gem Table\",\"italic\":false}"
+  }
+}
