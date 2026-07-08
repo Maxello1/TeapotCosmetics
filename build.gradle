@@ -33,6 +33,9 @@ dependencies {
 	// Polymer
 	modCompileOnly "eu.pb4:polymer-core:0.9.19+1.21.1"
 	modCompileOnly "eu.pb4:polymer-resource-pack:0.9.19+1.21.1"
+
+	// sgui (Server-side GUI library)
+	modImplementation include("eu.pb4:sgui:1.6.1+1.21.1")
 }
 
 processResources {
