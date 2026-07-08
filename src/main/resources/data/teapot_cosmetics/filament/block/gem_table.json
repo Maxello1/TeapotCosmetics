@@ -1,12 +1,8 @@
 {
   "id": "teapot_cosmetics:gem_table",
-  "vanillaBlock": "minecraft:smithing_table",
-  "vanillaItem": "minecraft:smithing_table",
   "group": "minecraft:functional",
   "blockResource": {
-    "models": {
-      "default": "teapot_cosmetics:block/gem_table"
-    }
+    "model": "teapot_cosmetics:block/gem_table"
   },
   "itemResource": {
     "models": {
