@@ -15,5 +15,7 @@ public class TeapotCosmetics implements ModInitializer {
 
         // Tell Polymer to include our mod's custom assets in its auto-generated resource pack!
         eu.pb4.polymer.resourcepack.api.PolymerResourcePackUtils.addModAssets(MOD_ID);
+
+        net.sidetopia.cosmetics.item.ModItems.registerModItems();
     }
 }
