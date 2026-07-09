@@ -20,7 +20,7 @@ public class GemTableGui extends SimpleGui {
         // Use the font trick: 
         // \uE000 is our negative space (-8 pixels) to align to the left edge of the chest GUI
         // \uE001 is our massive 256x256 custom GUI texture
-        this.setTitle(Text.literal("\uE000\uE001").setStyle(Style.EMPTY.withFont(Identifier.of("teapot_cosmetics", "default"))));
+        this.setTitle(Text.literal("\uE000\uE001").setStyle(Style.EMPTY.withFont(Identifier.of("teapot_cosmetics", "default")).withColor(0xFFFFFF)));
 
         // Fill unused slots with an invisible item to block clicking.
         var invisibleItem = Registries.ITEM.get(Identifier.of("teapot_cosmetics", "invisible_filler"));
