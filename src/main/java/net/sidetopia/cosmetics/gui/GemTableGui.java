@@ -21,7 +21,7 @@ public class GemTableGui extends SimpleGui {
         // Fill all 27 slots with a placeholder item to block clicking,
         // EXCEPT for the 3 slots we want the player to interact with.
         // We'll use Light Gray Glass Panes so they're easy to see for alignment testing.
-        GuiElementBuilder placeholder = GuiElementBuilder.from(Items.LIGHT_GRAY_STAINED_GLASS_PANE)
+        GuiElementBuilder placeholder = GuiElementBuilder.from(Items.LIGHT_GRAY_STAINED_GLASS_PANE.getDefaultStack())
             .setName(Text.literal(" "))
             .hideDefaultTooltip();
 
