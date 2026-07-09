@@ -27,11 +27,8 @@ public class GemTableGui extends SimpleGui {
         // \uE001 is our massive custom GUI texture
         this.setTitle(Text.literal("\uE000\uE001").setStyle(Style.EMPTY.withFont(Identifier.of("teapot_cosmetics", "default")).withColor(0xFFFFFF)));
 
-        // Fill unused slots with an invisible item to block clicking.
-        var invisibleItem = Registries.ITEM.get(Identifier.of("teapot_cosmetics", "invisible_filler"));
-        GuiElementBuilder placeholder = GuiElementBuilder.from(invisibleItem.getDefaultStack())
-            .setName(Text.literal(" "))
-            .hideDefaultTooltip();
+        // Fill unused slots with an empty item to block clicking (SimpleGui handles the locking)
+        GuiElementBuilder placeholder = GuiElementBuilder.from(Items.AIR.getDefaultStack());
 
         // 9x3 chest has 27 slots
         for (int i = 0; i < 27; i++) {
