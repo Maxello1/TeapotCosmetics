@@ -30,11 +30,11 @@ public class GemTableGui extends SimpleGui {
 
         // 9x3 chest has 27 slots
         for (int i = 0; i < 27; i++) {
-            // Leave slots 1, 3, and 6 open (Row 1)
-            // Slot 1 = row 1, col 2
-            // Slot 3 = row 1, col 4
-            // Slot 6 = row 1, col 7
-            if (i != 1 && i != 3 && i != 6) {
+            // Leave slots 10, 12, and 15 open (Middle row: Col 1, Col 3, Col 6)
+            // Slot 10 = row 2, col 2
+            // Slot 12 = row 2, col 4
+            // Slot 15 = row 2, col 7
+            if (i != 10 && i != 12 && i != 15) {
                 this.setSlot(i, placeholder);
             }
         }
