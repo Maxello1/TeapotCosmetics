@@ -35,12 +35,12 @@ public class GemTableGui extends SimpleGui {
 
         // 9x3 chest has 27 slots
         for (int i = 0; i < 27; i++) {
-            if (i == 10) {
-                this.setSlotRedirect(10, new Slot(craftingInv, 0, 0, 0));
-            } else if (i == 12) {
-                this.setSlotRedirect(12, new Slot(craftingInv, 1, 0, 0));
-            } else if (i == 15) {
-                this.setSlotRedirect(15, new Slot(craftingInv, 2, 0, 0));
+            if (i == 9) {
+                this.setSlotRedirect(9, new Slot(craftingInv, 0, 0, 0));
+            } else if (i == 11) {
+                this.setSlotRedirect(11, new Slot(craftingInv, 1, 0, 0));
+            } else if (i == 14) {
+                this.setSlotRedirect(14, new Slot(craftingInv, 2, 0, 0));
             } else {
                 this.setSlot(i, placeholder);
             }
