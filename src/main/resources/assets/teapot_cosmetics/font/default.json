@@ -9,7 +9,7 @@
     {
       "type": "bitmap",
       "file": "teapot_cosmetics:gui/gem_table_gui.png",
-      "ascent": 26,
+      "ascent": 25,
       "height": 256,
       "chars": [
         "\uE001"
