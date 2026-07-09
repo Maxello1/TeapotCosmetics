@@ -3,9 +3,12 @@ package net.sidetopia.cosmetics.gui;
 import eu.pb4.sgui.api.gui.SimpleGui;
 import eu.pb4.sgui.api.elements.GuiElementBuilder;
 import net.minecraft.item.Items;
+
 import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
+import net.minecraft.text.Style;
+import net.minecraft.util.Identifier;
 
 public class GemTableGui extends SimpleGui {
 
@@ -16,7 +19,7 @@ public class GemTableGui extends SimpleGui {
         // Use the font trick: 
         // \uE000 is our negative space (-8 pixels) to align to the left edge of the chest GUI
         // \uE001 is our massive 256x256 custom GUI texture
-        this.setTitle(Text.literal("\uE000\uE001"));
+        this.setTitle(Text.literal("\uE000\uE001").setStyle(Style.EMPTY.withFont(Identifier.of("teapot_cosmetics", "default"))));
 
         // Fill all 27 slots with a placeholder item to block clicking,
         // EXCEPT for the 3 slots we want the player to interact with.
