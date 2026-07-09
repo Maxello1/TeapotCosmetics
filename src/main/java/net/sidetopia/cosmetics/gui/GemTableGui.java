@@ -8,6 +8,7 @@ import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
 import net.minecraft.text.Style;
+import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
 
 public class GemTableGui extends SimpleGui {
@@ -21,19 +22,18 @@ public class GemTableGui extends SimpleGui {
         // \uE001 is our massive 256x256 custom GUI texture
         this.setTitle(Text.literal("\uE000\uE001").setStyle(Style.EMPTY.withFont(Identifier.of("teapot_cosmetics", "default"))));
 
-        // Fill all 27 slots with a placeholder item to block clicking,
-        // EXCEPT for the 3 slots we want the player to interact with.
-        // We'll use Light Gray Glass Panes so they're easy to see for alignment testing.
-        GuiElementBuilder placeholder = GuiElementBuilder.from(Items.LIGHT_GRAY_STAINED_GLASS_PANE.getDefaultStack())
+        // Fill unused slots with an invisible item to block clicking.
+        var invisibleItem = Registries.ITEM.get(Identifier.of("teapot_cosmetics", "invisible_filler"));
+        GuiElementBuilder placeholder = GuiElementBuilder.from(invisibleItem.getDefaultStack())
             .setName(Text.literal(" "))
             .hideDefaultTooltip();
 
         for (int i = 0; i < 27; i++) {
-            // Leave slots 10, 13, and 16 open (these are just guesses for the transparent squares)
+            // Leave slots 10, 12, and 15 open (based on the transparent squares in the GUI)
             // Slot 10 = row 2, col 2
-            // Slot 13 = row 2, col 5
-            // Slot 16 = row 2, col 8
-            if (i != 10 && i != 13 && i != 16) {
+            // Slot 12 = row 2, col 4
+            // Slot 15 = row 2, col 7
+            if (i != 10 && i != 12 && i != 15) {
                 this.setSlot(i, placeholder);
             }
         }
