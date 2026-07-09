@@ -14,8 +14,8 @@ import net.minecraft.util.Identifier;
 public class GemTableGui extends SimpleGui {
 
     public GemTableGui(ServerPlayerEntity player) {
-        // 3 rows chest GUI
-        super(ScreenHandlerType.GENERIC_9X3, player, false);
+        // 4 rows chest GUI (we need the extra row because the texture's crafting slots take up a whole row!)
+        super(ScreenHandlerType.GENERIC_9X4, player, false);
         
         // Use the font trick: 
         // \uE000 is our negative space (-8 pixels) to align to the left edge of the chest GUI
@@ -28,12 +28,13 @@ public class GemTableGui extends SimpleGui {
             .setName(Text.literal(" "))
             .hideDefaultTooltip();
 
-        for (int i = 0; i < 27; i++) {
-            // Leave slots 10, 12, and 15 open (based on the transparent squares in the GUI)
-            // Slot 10 = row 2, col 2
-            // Slot 12 = row 2, col 4
-            // Slot 15 = row 2, col 7
-            if (i != 10 && i != 12 && i != 15) {
+        // 9x4 chest has 36 slots
+        for (int i = 0; i < 36; i++) {
+            // Leave slots 1, 3, and 6 open (Row 1)
+            // Slot 1 = row 1, col 2
+            // Slot 3 = row 1, col 4
+            // Slot 6 = row 1, col 7
+            if (i != 1 && i != 3 && i != 6) {
                 this.setSlot(i, placeholder);
             }
         }
