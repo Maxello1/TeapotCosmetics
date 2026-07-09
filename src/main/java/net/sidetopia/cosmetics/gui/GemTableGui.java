@@ -46,4 +46,21 @@ public class GemTableGui extends SimpleGui {
             }
         }
     }
+
+    @Override
+    public void onClose() {
+        if (this.player != null) {
+            for (int i = 0; i < craftingInv.size(); i++) {
+                net.minecraft.item.ItemStack stack = craftingInv.getStack(i);
+                if (!stack.isEmpty()) {
+                    this.player.getInventory().insertStack(stack);
+                    if (!stack.isEmpty()) {
+                        this.player.dropItem(stack, false);
+                    }
+                    craftingInv.setStack(i, net.minecraft.item.ItemStack.EMPTY);
+                }
+            }
+        }
+        super.onClose();
+    }
 }

@@ -1,3 +1,4 @@
 {
-  "material": "minecraft:paper"
+  "id": "teapot_cosmetics:invisible_filler",
+  "vanillaItem": "minecraft:paper"
 }
