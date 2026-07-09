@@ -4,14 +4,19 @@ import eu.pb4.sgui.api.gui.SimpleGui;
 import eu.pb4.sgui.api.elements.GuiElementBuilder;
 import net.minecraft.item.Items;
 
-import net.minecraft.screen.ScreenHandlerType;
-import net.minecraft.server.network.ServerPlayerEntity;
-import net.minecraft.text.Text;
-import net.minecraft.text.Style;
 import net.minecraft.registry.Registries;
+import net.minecraft.screen.ScreenHandlerType;
+import net.minecraft.screen.slot.Slot;
+import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.text.Style;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
+import net.minecraft.inventory.SimpleInventory;
 
 public class GemTableGui extends SimpleGui {
+
+    // Dedicated inventory for the 3 interactive slots
+    private final SimpleInventory craftingInv = new SimpleInventory(3);
 
     public GemTableGui(ServerPlayerEntity player) {
         // 3 rows chest GUI
@@ -30,11 +35,13 @@ public class GemTableGui extends SimpleGui {
 
         // 9x3 chest has 27 slots
         for (int i = 0; i < 27; i++) {
-            // Leave slots 10, 12, and 15 open (Middle row: Col 1, Col 3, Col 6)
-            // Slot 10 = row 2, col 2
-            // Slot 12 = row 2, col 4
-            // Slot 15 = row 2, col 7
-            if (i != 10 && i != 12 && i != 15) {
+            if (i == 10) {
+                this.setSlotRedirect(10, new Slot(craftingInv, 0, 0, 0));
+            } else if (i == 12) {
+                this.setSlotRedirect(12, new Slot(craftingInv, 1, 0, 0));
+            } else if (i == 15) {
+                this.setSlotRedirect(15, new Slot(craftingInv, 2, 0, 0));
+            } else {
                 this.setSlot(i, placeholder);
             }
         }
