@@ -23,7 +23,7 @@
   },
   "properties": {
     "destroyTime": 2.5,
-    "requiresTool": true
+    "requiresTool": false
   },
   "components": {
     "minecraft:custom_name": "{\"text\":\"Gem Table\",\"italic\":false}"
