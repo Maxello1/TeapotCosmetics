@@ -1,0 +1,33 @@
+{
+  "replace": false,
+  "values": [
+    "teapot_cosmetics:alexandrite",
+    "teapot_cosmetics:amber",
+    "teapot_cosmetics:aquamarine",
+    "teapot_cosmetics:beryl",
+    "teapot_cosmetics:celestite",
+    "teapot_cosmetics:cinnabar",
+    "teapot_cosmetics:citrine",
+    "teapot_cosmetics:flawless_amethyst",
+    "teapot_cosmetics:flawless_diamond",
+    "teapot_cosmetics:flawless_emerald",
+    "teapot_cosmetics:flawless_lapis",
+    "teapot_cosmetics:flawless_quartz",
+    "teapot_cosmetics:garnet",
+    "teapot_cosmetics:jade",
+    "teapot_cosmetics:onyx",
+    "teapot_cosmetics:opal",
+    "teapot_cosmetics:padparadscha",
+    "teapot_cosmetics:pearl",
+    "teapot_cosmetics:peridot",
+    "teapot_cosmetics:rose_quartz",
+    "teapot_cosmetics:ruby",
+    "teapot_cosmetics:sapphire",
+    "teapot_cosmetics:serpentine",
+    "teapot_cosmetics:topaz",
+    "teapot_cosmetics:tourmaline",
+    "teapot_cosmetics:turquoise",
+    "teapot_cosmetics:witherite",
+    "teapot_cosmetics:zircon"
+  ]
+}

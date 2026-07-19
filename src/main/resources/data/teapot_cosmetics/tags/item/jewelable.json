@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "#minecraft:enchantable/armor",
+    "#minecraft:enchantable/sharp_weapon",
+    "#minecraft:enchantable/mining",
+    "#minecraft:enchantable/fishing",
+    "minecraft:bow",
+    "minecraft:crossbow",
+    "minecraft:trident",
+    "minecraft:mace",
+    "minecraft:shield"
+  ]
+}
