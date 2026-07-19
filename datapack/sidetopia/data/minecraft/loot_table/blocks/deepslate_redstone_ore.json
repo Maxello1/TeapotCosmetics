@@ -1,0 +1,56 @@
+{
+    "type":  "minecraft:block",
+    "pools":  [
+                  {
+                      "bonus_rolls":  0,
+                      "entries":  [
+                                      {
+                                          "type":  "minecraft:alternatives",
+                                          "children":  [
+                                                           {
+                                                               "type":  "minecraft:item",
+                                                               "functions":  [
+                                                                                 {
+                                                                                     "add":  false,
+                                                                                     "count":  {
+                                                                                                   "type":  "minecraft:uniform",
+                                                                                                   "max":  4,
+                                                                                                   "min":  3
+                                                                                               },
+                                                                                     "function":  "minecraft:set_count"
+                                                                                 },
+                                                                                 {
+                                                                                     "enchantment":  "minecraft:fortune",
+                                                                                     "formula":  "minecraft:binomial_with_bonus_count",
+                                                                                     "function":  "minecraft:apply_bonus",
+                                                                                     "parameters":  {
+                                                                                                        "extra":  2,
+                                                                                                        "probability":  0.5
+                                                                                                    }
+                                                                                 }
+                                                                             ],
+                                                               "name":  "minecraft:redstone"
+                                                           }
+                                                       ]
+                                      }
+                                  ],
+                      "rolls":  1
+                  },
+                  {
+                      "rolls":  1,
+                      "entries":  [
+                                      {
+                                          "type":  "minecraft:item",
+                                          "name":  "teapot_cosmetics:ruby"
+                                      }
+                                  ],
+                      "conditions":  [
+                                         {
+                                             "condition":  "minecraft:random_chance",
+                                             "chance":  0.01
+                                         }
+                                     ]
+                  }
+              ],
+    "random_sequence":  "minecraft:blocks/deepslate_redstone_ore"
+}

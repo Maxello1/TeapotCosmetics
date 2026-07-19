@@ -1,0 +1,8 @@
+{
+  "jewel": "teapot_cosmetics:opal",
+  "enchantment": "sidetopia:opal_guardian_sword",
+  "level": 1,
+  "required_jeweller_tier": 0,
+  "allowed_items": "#minecraft:swords",
+  "duplicate_policy": "reject"
+}

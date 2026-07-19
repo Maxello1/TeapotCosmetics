@@ -13,9 +13,11 @@ import net.minecraft.server.command.CommandManager;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
+import net.sidetopia.cosmetics.jeweling.JewelingConfig;
 import net.sidetopia.cosmetics.jeweling.JewelingEvaluation;
 import net.sidetopia.cosmetics.jeweling.JewelingMetadata;
 import net.sidetopia.cosmetics.jeweling.JewelingRecipe;
+import net.sidetopia.cosmetics.jeweling.JewelingTags;
 import net.sidetopia.cosmetics.jeweling.JewelingTableManager;
 
 import java.util.List;
@@ -35,7 +37,15 @@ public final class JewelingCommands {
                                 .then(CommandManager.literal("recipes")
                                         .executes(context -> recipes(context.getSource())))
                                 .then(CommandManager.literal("inspect")
-                                        .executes(context -> inspect(context.getSource()))))));
+                                        .executes(context -> inspect(context.getSource()))
+                                        .then(CommandManager.literal("jewel")
+                                                .executes(context -> inspectJewel(context.getSource()))))
+                                .then(CommandManager.literal("testmode")
+                                        .executes(context -> testModeStatus(context.getSource()))
+                                        .then(CommandManager.literal("on")
+                                                .executes(context -> setTestMode(context.getSource(), true)))
+                                        .then(CommandManager.literal("off")
+                                                .executes(context -> setTestMode(context.getSource(), false)))))));
     }
 
     private static int reload(ServerCommandSource source) {
@@ -57,6 +67,14 @@ public final class JewelingCommands {
                 () -> Text.literal("Loaded Jeweling recipes: " + recipes.size()),
                 false
         );
+        if (recipes.isEmpty()) {
+            source.sendFeedback(
+                    () -> Text.literal(
+                            "No recipes were found under data/<namespace>/jeweling_recipes/*.json."
+                    ),
+                    false
+            );
+        }
         for (JewelingRecipe recipe : recipes) {
             boolean jewelPresent = Registries.ITEM.containsId(recipe.jewel());
             boolean enchantmentPresent = enchantments.containsId(recipe.enchantment());
@@ -75,7 +93,21 @@ public final class JewelingCommands {
                     false
             );
         }
-        return recipes.size();
+        long missingJewels = recipes.stream()
+                .filter(recipe -> !Registries.ITEM.containsId(recipe.jewel()))
+                .count();
+        long missingEnchantments = recipes.stream()
+                .filter(recipe -> !enchantments.containsId(recipe.enchantment()))
+                .count();
+        source.sendFeedback(
+                () -> Text.literal(
+                        "Recipes: " + recipes.size()
+                                + " | Missing jewels: " + missingJewels
+                                + " | Missing enchantments: " + missingEnchantments
+                ),
+                false
+        );
+        return 1;
     }
 
     private static int inspect(ServerCommandSource source) throws CommandSyntaxException {
@@ -163,6 +195,55 @@ public final class JewelingCommands {
                 false
         );
         return evaluation.ready() ? 1 : 0;
+    }
+
+    private static int inspectJewel(ServerCommandSource source) throws CommandSyntaxException {
+        ServerPlayerEntity player = source.getPlayerOrThrow();
+        ItemStack inspected = player.getMainHandStack();
+        if (inspected.isEmpty()) {
+            inspected = player.getOffHandStack();
+        }
+        ItemStack jewel = inspected;
+        List<JewelingRecipe> matches = JewelingTableManager.recipes().find(jewel);
+        source.sendFeedback(
+                () -> Text.literal(
+                        "Registry ID=" + Registries.ITEM.getId(jewel.getItem())
+                                + " | Jewel tag="
+                                + (!jewel.isEmpty() && jewel.isIn(JewelingTags.jewels()))
+                                + " | Matching recipes=" + matches.size()
+                                + " | Recipe IDs=" + recipeIds(matches)
+                ),
+                false
+        );
+        return 1;
+    }
+
+    private static int testModeStatus(ServerCommandSource source) {
+        boolean enabled = JewelingConfig.get().bypassKnowledgeBoundForOperators;
+        source.sendFeedback(
+                () -> Text.literal(
+                        "Jeweling operator test mode is "
+                                + (enabled ? "enabled" : "disabled")
+                                + "."
+                ),
+                false
+        );
+        return 1;
+    }
+
+    private static int setTestMode(ServerCommandSource source, boolean enabled) {
+        JewelingConfig.get().bypassKnowledgeBoundForOperators = enabled;
+        source.sendFeedback(
+                () -> Text.literal(
+                        "Jeweling operator test mode "
+                                + (enabled ? "enabled" : "disabled")
+                                + ". Operators "
+                                + (enabled ? "may now" : "no longer")
+                                + " bypass Jeweller tier and socket limits."
+                ),
+                true
+        );
+        return 1;
     }
 
     private static String recipeIds(List<JewelingRecipe> recipes) {

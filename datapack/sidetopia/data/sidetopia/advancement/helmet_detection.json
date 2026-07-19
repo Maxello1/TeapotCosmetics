@@ -1,0 +1,25 @@
+{
+  "criteria": {
+    "change": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#minecraft:head_armor",
+            "components": {
+              "minecraft:enchantments": {
+                "levels": {
+                  "sidetopia:celestite_clarity": 1
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "sidetopia:detection/helmet_check"
+  },
+  "sends_telemetry_event": false
+}

@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:smoking",
+  "category": "food",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "ingredient": {
+    "item": "minecraft:egg"
+  },
+  "result": {
+    "id": "minecraft:cooked_cod",
+    "components": {
+      "minecraft:custom_name": "{\"text\":\"Cooked Egg\",\"italic\":false,\"color\":\"white\"}",
+      "minecraft:custom_model_data": 1,
+      "minecraft:food": {
+        "nutrition": 3,
+        "saturation": 0,
+        "can_always_eat": false,
+        "eat_seconds": 1,
+        "effects": []
+      },
+      "minecraft:custom_data": {
+        "kb_id": "cooked_egg"
+      }
+    }
+  }
+}

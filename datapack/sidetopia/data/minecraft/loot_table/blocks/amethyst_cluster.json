@@ -1,0 +1,70 @@
+{
+    "type":  "minecraft:block",
+    "pools":  [
+                  {
+                      "bonus_rolls":  0,
+                      "entries":  [
+                                      {
+                                          "type":  "minecraft:alternatives",
+                                          "children":  [
+                                                           {
+                                                               "type":  "minecraft:alternatives",
+                                                               "children":  [
+                                                                                {
+                                                                                    "type":  "minecraft:item",
+                                                                                    "conditions":  [
+
+                                                                                                   ],
+                                                                                    "functions":  [
+                                                                                                      {
+                                                                                                          "add":  false,
+                                                                                                          "count":  {
+                                                                                                                        "type":  "minecraft:uniform",
+                                                                                                                        "min":  2,
+                                                                                                                        "max":  4
+                                                                                                                    },
+                                                                                                          "function":  "minecraft:set_count"
+                                                                                                      },
+                                                                                                      {
+                                                                                                          "function":  "minecraft:apply_bonus",
+                                                                                                          "enchantment":  "sidetopia:lapis_prospector",
+                                                                                                          "formula":  "minecraft:binomial_with_bonus_count",
+                                                                                                          "parameters":  {
+                                                                                                                             "extra":  1,
+                                                                                                                             "probability":  0.5
+                                                                                                                         },
+                                                                                                          "conditions":  [
+
+                                                                                                                         ]
+                                                                                                      }
+                                                                                                  ],
+                                                                                    "name":  "minecraft:amethyst_shard"
+                                                                                }
+                                                                            ]
+                                                           }
+                                                       ]
+                                      }
+                                  ],
+                      "rolls":  1
+                  },
+                  {
+                      "rolls":  1,
+                      "entries":  [
+                                      {
+                                          "type":  "minecraft:item",
+                                          "name":  "teapot_cosmetics:flawless_amethyst"
+                                      }
+                                  ],
+                      "functions":  [
+
+                                    ],
+                      "conditions":  [
+                                         {
+                                             "condition":  "minecraft:random_chance",
+                                             "chance":  0.03
+                                         }
+                                     ]
+                  }
+              ],
+    "random_sequence":  "minecraft:blocks/amethyst_cluster"
+}

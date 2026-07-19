@@ -1,0 +1,140 @@
+{
+    "type":  "minecraft:block",
+    "pools":  [
+                  {
+                      "bonus_rolls":  0,
+                      "entries":  [
+                                      {
+                                          "type":  "minecraft:item",
+                                          "name":  "minecraft:cobbled_deepslate"
+                                      }
+                                  ],
+                      "rolls":  1,
+                      "functions":  [
+
+                                    ],
+                      "conditions":  [
+
+                                     ]
+                  },
+                  {
+                      "rolls":  1,
+                      "entries":  [
+                                      {
+                                          "type":  "minecraft:item",
+                                          "name":  "teapot_cosmetics:flawless_amethyst"
+                                      },
+                                      {
+                                          "type":  "minecraft:item",
+                                          "name":  "teapot_cosmetics:flawless_emerald"
+                                      },
+                                      {
+                                          "type":  "minecraft:item",
+                                          "name":  "teapot_cosmetics:flawless_diamond"
+                                      },
+                                      {
+                                          "type":  "minecraft:item",
+                                          "name":  "teapot_cosmetics:flawless_lapis"
+                                      },
+                                      {
+                                          "type":  "minecraft:item",
+                                          "name":  "teapot_cosmetics:flawless_quartz"
+                                      },
+                                      {
+                                          "type":  "minecraft:item",
+                                          "name":  "teapot_cosmetics:aquamarine"
+                                      },
+                                      {
+                                          "type":  "minecraft:item",
+                                          "name":  "teapot_cosmetics:sapphire"
+                                      },
+                                      {
+                                          "type":  "minecraft:item",
+                                          "name":  "teapot_cosmetics:ruby"
+                                      },
+                                      {
+                                          "type":  "minecraft:item",
+                                          "name":  "teapot_cosmetics:tourmaline"
+                                      },
+                                      {
+                                          "type":  "minecraft:item",
+                                          "name":  "teapot_cosmetics:turquoise"
+                                      },
+                                      {
+                                          "type":  "minecraft:item",
+                                          "name":  "teapot_cosmetics:beryl"
+                                      },
+                                      {
+                                          "type":  "minecraft:item",
+                                          "name":  "teapot_cosmetics:peridot"
+                                      },
+                                      {
+                                          "type":  "minecraft:item",
+                                          "name":  "teapot_cosmetics:citrine"
+                                      },
+                                      {
+                                          "type":  "minecraft:item",
+                                          "name":  "teapot_cosmetics:onyx"
+                                      },
+                                      {
+                                          "type":  "minecraft:item",
+                                          "name":  "teapot_cosmetics:rose_quartz"
+                                      },
+                                      {
+                                          "type":  "minecraft:item",
+                                          "name":  "teapot_cosmetics:zircon"
+                                      },
+                                      {
+                                          "type":  "minecraft:item",
+                                          "name":  "teapot_cosmetics:witherite"
+                                      },
+                                      {
+                                          "type":  "minecraft:item",
+                                          "name":  "teapot_cosmetics:topaz"
+                                      },
+                                      {
+                                          "type":  "minecraft:item",
+                                          "name":  "teapot_cosmetics:serpentine"
+                                      },
+                                      {
+                                          "type":  "minecraft:item",
+                                          "name":  "teapot_cosmetics:jade"
+                                      },
+                                      {
+                                          "type":  "minecraft:item",
+                                          "name":  "teapot_cosmetics:garnet"
+                                      },
+                                      {
+                                          "type":  "minecraft:item",
+                                          "name":  "teapot_cosmetics:cinnabar"
+                                      },
+                                      {
+                                          "type":  "minecraft:item",
+                                          "name":  "teapot_cosmetics:celestite"
+                                      },
+                                      {
+                                          "type":  "minecraft:item",
+                                          "name":  "teapot_cosmetics:amber"
+                                      },
+                                      {
+                                          "type":  "minecraft:item",
+                                          "name":  "teapot_cosmetics:opal"
+                                      },
+                                      {
+                                          "type":  "minecraft:item",
+                                          "name":  "teapot_cosmetics:padparadscha"
+                                      }
+                                  ],
+                      "conditions":  [
+                                         {
+                                             "condition":  "minecraft:random_chance",
+                                             "chance":  0.05
+                                         }
+                                     ]
+                  }
+              ],
+    "functions":  [
+
+                  ],
+    "random_sequence":  "minecraft:blocks/deepslate_lapis_ore"
+}

@@ -25,6 +25,7 @@ public final class JewelingConfig {
     public boolean requireKnowledgeBound = false;
     public boolean useKnowledgeBoundProgression = true;
     public boolean grantKnowledgeBoundXp = true;
+    public boolean bypassKnowledgeBoundForOperators = false;
 
     public int fallbackMaxSockets = 3;
     public boolean checkEnchantmentCompatibility = true;
@@ -149,6 +150,8 @@ public final class JewelingConfig {
         public String featureDisabled = "Jeweling is currently disabled.";
         public String invalidJewel = "That item is not a valid jewel.";
         public String noRecipe = "This jewel has no configured effect.";
+        public String noRecipesLoaded =
+                "No Jeweling recipes are loaded. Ask an administrator to check the datapack.";
         public String invalidEquipment = "This item cannot be jeweled.";
         public String unsupportedEquipment = "This jewel cannot be applied to that item.";
         public String ambiguousRecipe = "This jewel has conflicting recipes. Ask an administrator.";
@@ -169,6 +172,7 @@ public final class JewelingConfig {
             featureDisabled = value(featureDisabled, defaults.featureDisabled);
             invalidJewel = value(invalidJewel, defaults.invalidJewel);
             noRecipe = value(noRecipe, defaults.noRecipe);
+            noRecipesLoaded = value(noRecipesLoaded, defaults.noRecipesLoaded);
             invalidEquipment = value(invalidEquipment, defaults.invalidEquipment);
             unsupportedEquipment = value(unsupportedEquipment, defaults.unsupportedEquipment);
             ambiguousRecipe = value(ambiguousRecipe, defaults.ambiguousRecipe);

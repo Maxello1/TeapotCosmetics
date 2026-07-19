@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "base": {
+    "item": "minecraft:gold_ingot"
+  },
+  "addition": {
+    "item": "minecraft:cobbled_deepslate"
+  },
+  "template": {
+    "item": "minecraft:cobbled_deepslate"
+  },
+  "result": {
+    "count": 1,
+    "id": "minecraft:ward_armor_trim_smithing_template"
+  }
+}

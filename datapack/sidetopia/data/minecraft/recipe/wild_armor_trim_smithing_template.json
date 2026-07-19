@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "base": {
+    "item": "minecraft:gold_ingot"
+  },
+  "addition": {
+    "item": "minecraft:mossy_cobblestone"
+  },
+  "template": {
+    "item": "minecraft:mossy_cobblestone"
+  },
+  "result": {
+    "id": "minecraft:wild_armor_trim_smithing_template",
+    "count": 1
+  }
+}

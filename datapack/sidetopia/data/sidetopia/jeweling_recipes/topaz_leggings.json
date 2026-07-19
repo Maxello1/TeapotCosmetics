@@ -1,0 +1,8 @@
+{
+  "jewel": "teapot_cosmetics:topaz",
+  "enchantment": "sidetopia:topaz_adrenaline_leggings",
+  "level": 1,
+  "required_jeweller_tier": 0,
+  "allowed_items": "#minecraft:enchantable/leg_armor",
+  "duplicate_policy": "reject"
+}

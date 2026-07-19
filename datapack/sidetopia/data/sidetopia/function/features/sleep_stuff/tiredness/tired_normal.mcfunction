@@ -1,0 +1,2 @@
+attribute @s minecraft:generic.movement_speed modifier add sleepfatige:speed_debuff -0.2 add_multiplied_total
+attribute @s minecraft:player.block_break_speed modifier add sleepfatige:block_break_debuff -0.2 add_multiplied_total

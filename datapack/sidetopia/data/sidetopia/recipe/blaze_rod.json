@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "show_notification": true,
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:iron_nugget"
+    },
+    "X": {
+      "item": "minecraft:blaze_powder"
+    },
+    "U": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "#X#",
+    "XUX",
+    "#X#"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:blaze_rod"
+  }
+}

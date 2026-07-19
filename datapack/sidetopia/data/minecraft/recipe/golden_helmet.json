@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "X": {
+      "item": "minecraft:copper_ingot"
+    }
+  },
+  "pattern": [
+    "XXX",
+    "X X"
+  ],
+  "result": {
+    "components": {
+      "minecraft:custom_name": "{\"text\":\"Copper Helmet\",\"italic\":false,\"color\":\"white\"}",
+      "minecraft:attribute_modifiers": {
+        "modifiers": [
+          {
+            "type": "minecraft:generic.armor",
+            "id": "minecraft:golden_helmet",
+            "amount": 2,
+            "operation": "add_value",
+            "slot": "head"
+          }
+        ]
+      },
+      "minecraft:hide_additional_tooltip": {},
+      "minecraft:max_damage": 121
+    },
+    "count": 1,
+    "id": "minecraft:golden_helmet"
+  }
+}

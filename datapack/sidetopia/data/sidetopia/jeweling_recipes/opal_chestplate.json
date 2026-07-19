@@ -1,0 +1,8 @@
+{
+  "jewel": "teapot_cosmetics:opal",
+  "enchantment": "sidetopia:opal_guardian_chestplate",
+  "level": 1,
+  "required_jeweller_tier": 0,
+  "allowed_items": "#minecraft:chest_armor",
+  "duplicate_policy": "reject"
+}

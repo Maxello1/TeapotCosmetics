@@ -1,0 +1,47 @@
+{
+    "type":  "minecraft:block",
+    "pools":  [
+                  {
+                      "bonus_rolls":  0,
+                      "entries":  [
+                                      {
+                                          "type":  "minecraft:alternatives",
+                                          "children":  [
+                                                           {
+                                                               "type":  "minecraft:item",
+                                                               "functions":  [
+                                                                                 {
+                                                                                     "enchantment":  "sidetopia:lapis_prospector",
+                                                                                     "formula":  "minecraft:binomial_with_bonus_count",
+                                                                                     "function":  "minecraft:apply_bonus",
+                                                                                     "parameters":  {
+                                                                                                        "extra":  1,
+                                                                                                        "probability":  0.3
+                                                                                                    }
+                                                                                 }
+                                                                             ],
+                                                               "name":  "minecraft:emerald"
+                                                           }
+                                                       ]
+                                      }
+                                  ],
+                      "rolls":  1
+                  },
+                  {
+                      "rolls":  1,
+                      "entries":  [
+                                      {
+                                          "type":  "minecraft:item",
+                                          "name":  "teapot_cosmetics:flawless_emerald"
+                                      }
+                                  ],
+                      "conditions":  [
+                                         {
+                                             "condition":  "minecraft:random_chance",
+                                             "chance":  0.01
+                                         }
+                                     ]
+                  }
+              ],
+    "random_sequence":  "minecraft:blocks/emerald_ore"
+}

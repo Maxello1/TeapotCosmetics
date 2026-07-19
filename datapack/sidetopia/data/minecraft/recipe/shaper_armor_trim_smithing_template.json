@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "base": {
+    "item": "minecraft:gold_ingot"
+  },
+  "addition": {
+    "item": "minecraft:terracotta"
+  },
+  "template": {
+    "item": "minecraft:clay_ball"
+  },
+  "result": {
+    "count": 1,
+    "id": "minecraft:shaper_armor_trim_smithing_template"
+  }
+}

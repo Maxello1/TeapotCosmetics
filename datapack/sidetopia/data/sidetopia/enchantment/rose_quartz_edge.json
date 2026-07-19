@@ -1,0 +1,154 @@
+{
+  "exclusive_set": "#sidetopia:exclusive_set/edge",
+  "anvil_cost": 1,
+  "description": {
+    "text": "Rose Quartz Edge",
+    "color": "#ffb8f0",
+    "bold": true
+  },
+  "max_cost": {
+    "base": 0,
+    "per_level_above_first": 0
+  },
+  "max_level": 1,
+  "min_cost": {
+    "base": 0,
+    "per_level_above_first": 0
+  },
+  "slots": [
+    "mainhand"
+  ],
+  "supported_items": "#minecraft:swords",
+  "weight": 1,
+  "effects": {
+    "minecraft:post_attack": [
+      {
+        "requirements": {
+          "condition": "minecraft:all_of",
+          "terms": [
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.2
+            },
+            {
+              "condition": "minecraft:inverted",
+              "term": {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "type": [
+                    "minecraft:player",
+                    "minecraft:skeleton",
+                    "minecraft:stray"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "effect": {
+          "type": "minecraft:all_of",
+          "effects": [
+            {
+              "type": "minecraft:run_function",
+              "function": "sidetopia:features/gem/gem_stuff/mob_quartz_bleed"
+            },
+            {
+              "type": "minecraft:spawn_particles",
+              "particle": {
+                "type": "minecraft:dust",
+                "color": [
+                  0.8,
+                  0,
+                  0
+                ],
+                "scale": 1.5
+              },
+              "horizontal_position": {
+                "type": "entity_position",
+                "offset": 0.2
+              },
+              "vertical_position": {
+                "type": "entity_position",
+                "offset": 0.1
+              },
+              "horizontal_velocity": {
+                "base": 0.05
+              },
+              "vertical_velocity": {
+                "base": -0.15
+              },
+              "speed": 0.05
+            }
+          ]
+        },
+        "enchanted": "attacker",
+        "affected": "victim"
+      },
+      {
+        "requirements": {
+          "condition": "minecraft:all_of",
+          "terms": [
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.2
+            },
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "type": "minecraft:player"
+              }
+            }
+          ]
+        },
+        "effect": {
+          "type": "minecraft:all_of",
+          "effects": [
+            {
+              "type": "minecraft:spawn_particles",
+              "particle": {
+                "type": "minecraft:dust",
+                "color": [
+                  0.8,
+                  0,
+                  0
+                ],
+                "scale": 1.5
+              },
+              "horizontal_position": {
+                "type": "entity_position",
+                "offset": 0.2
+              },
+              "vertical_position": {
+                "type": "entity_position",
+                "offset": 0.1
+              },
+              "horizontal_velocity": {
+                "base": 0.05
+              },
+              "vertical_velocity": {
+                "base": -0.15
+              },
+              "speed": 0.05
+            },
+            {
+              "type": "minecraft:run_function",
+              "function": "sidetopia:features/gem/gem_stuff/quartz_bleed"
+            }
+          ]
+        },
+        "enchanted": "attacker",
+        "affected": "victim"
+      }
+    ],
+    "minecraft:damage": [
+      {
+        "effect": {
+          "type": "minecraft:add",
+          "value": 1
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "exclusive_set": "#sidetopia:exclusive_set/armor",
+  "anvil_cost": 1,
+  "description": {
+    "text": "Padparadscha Sentinel",
+    "color": "red",
+    "bold": true
+  },
+  "effects": {
+    "minecraft:attributes": [
+      {
+        "attribute": "minecraft:generic.armor",
+        "id": "sidetopia:corundum_sentinel",
+        "amount": 2,
+        "operation": "add_value"
+      },
+      {
+        "attribute": "minecraft:generic.armor_toughness",
+        "id": "sidetopia:corundum_sentinel",
+        "amount": 2,
+        "operation": "add_value"
+      },
+      {
+        "attribute": "minecraft:generic.knockback_resistance",
+        "id": "sidetopia:corundum_sentinel",
+        "amount": 0.05,
+        "operation": "add_value"
+      }
+    ]
+  },
+  "max_cost": {
+    "base": 0,
+    "per_level_above_first": 0
+  },
+  "max_level": 1,
+  "min_cost": {
+    "base": 0,
+    "per_level_above_first": 0
+  },
+  "slots": [
+    "armor"
+  ],
+  "supported_items": "#minecraft:enchantable/armor",
+  "weight": 1
+}

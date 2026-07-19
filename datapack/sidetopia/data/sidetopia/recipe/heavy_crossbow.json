@@ -1,0 +1,40 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "&": {
+      "item": "minecraft:iron_ingot"
+    },
+    "X": {
+      "item": "minecraft:lead"
+    },
+    "L": {
+      "item": "minecraft:tripwire_hook"
+    },
+    "W": {
+      "tag": "minecraft:logs"
+    }
+  },
+  "pattern": [
+    "&&&",
+    "LXL",
+    " W "
+  ],
+  "result": {
+    "components": {
+      "minecraft:custom_name": "{\"text\":\"Heavy Crossbow\",\"italic\":false,\"color\":\"white\"}",
+      "minecraft:custom_data": {
+        "kb_id": "heavy_crossbow"
+      },
+      "minecraft:max_damage": 930,
+      "minecraft:custom_model_data": 1,
+      "minecraft:enchantments": {
+        "levels": {
+          "sidetopia:heavy_crossbow": 1
+        }
+      }
+    },
+    "count": 1,
+    "id": "minecraft:crossbow"
+  }
+}

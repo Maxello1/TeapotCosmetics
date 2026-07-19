@@ -1,0 +1,15 @@
+{
+	"criteria": {
+		"drawing": {
+			"trigger": "minecraft:using_item",
+			"conditions": {
+				"item": {
+					"items": "minecraft:bow"
+				}
+			}
+		}
+	},
+	"rewards": {
+		"function": "sidetopia:detection/bow_detection"
+	}
+}

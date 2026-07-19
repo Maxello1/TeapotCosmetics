@@ -1,0 +1,1 @@
+kill @a[scores={death_timer=1}]

@@ -1,0 +1,30 @@
+{
+  "anvil_cost": 0,
+  "description": {
+    "text": "Super Rod"
+  },
+  "effects": {
+    "minecraft:fishing_time_reduction": [
+      {
+        "effect": {
+          "type": "minecraft:add",
+          "value": 10
+        }
+      }
+    ]
+  },
+  "max_cost": {
+    "base": 0,
+    "per_level_above_first": 0
+  },
+  "max_level": 1,
+  "min_cost": {
+    "base": 0,
+    "per_level_above_first": 0
+  },
+  "slots": [
+    "mainhand"
+  ],
+  "supported_items": "#minecraft:enchantable/fishing",
+  "weight": 1
+}

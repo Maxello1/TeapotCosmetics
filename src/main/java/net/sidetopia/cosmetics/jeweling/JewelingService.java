@@ -100,7 +100,12 @@ public final class JewelingService {
                 recipe.requiredJewellerTier(),
                 currentSockets
         );
-        if (!permission.allowed()) {
+        boolean operatorProgressionBypass = canOperatorBypassProgression(
+                config.bypassKnowledgeBoundForOperators,
+                player.hasPermissionLevel(2),
+                permission.reason()
+        );
+        if (!permission.allowed() && !operatorProgressionBypass) {
             JewelingStatus status = switch (permission.reason()) {
                 case KNOWLEDGEBOUND_REQUIRED -> JewelingStatus.KNOWLEDGEBOUND_REQUIRED;
                 case SYSTEM_DISABLED -> JewelingStatus.SYSTEM_DISABLED;
@@ -241,6 +246,17 @@ public final class JewelingService {
                 maximumSockets,
                 Text.literal(message)
         );
+    }
+
+    static boolean canOperatorBypassProgression(
+            boolean enabled,
+            boolean operator,
+            KnowledgeBoundBridge.FailureReason reason
+    ) {
+        return enabled
+                && operator
+                && (reason == KnowledgeBoundBridge.FailureReason.TIER_TOO_LOW
+                || reason == KnowledgeBoundBridge.FailureReason.SOCKET_LIMIT_REACHED);
     }
 
     private static String format(

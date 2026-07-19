@@ -1,0 +1,8 @@
+{
+  "jewel": "teapot_cosmetics:serpentine",
+  "enchantment": "sidetopia:serpentine_silence",
+  "level": 1,
+  "required_jeweller_tier": 0,
+  "allowed_items": "#teapot_cosmetics:jewelable",
+  "duplicate_policy": "reject"
+}

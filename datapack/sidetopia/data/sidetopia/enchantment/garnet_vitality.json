@@ -1,0 +1,32 @@
+{
+  "anvil_cost": 0,
+  "description": {
+    "text": "Garnet Vitality",
+    "color": "red",
+    "bold": true
+  },
+  "effects": {
+    "minecraft:attributes": [
+      {
+        "attribute": "minecraft:generic.max_health",
+        "id": "sidetopia:garnet_vitality",
+        "amount": 2,
+        "operation": "add_value"
+      }
+    ]
+  },
+  "max_cost": {
+    "base": 0,
+    "per_level_above_first": 0
+  },
+  "max_level": 1,
+  "min_cost": {
+    "base": 0,
+    "per_level_above_first": 0
+  },
+  "slots": [
+    "armor"
+  ],
+  "supported_items": "#minecraft:enchantable/armor",
+  "weight": 1
+}

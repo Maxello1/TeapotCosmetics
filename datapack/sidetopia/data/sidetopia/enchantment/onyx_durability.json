@@ -1,0 +1,36 @@
+{
+  "anvil_cost": 1,
+  "description": {
+    "text": "Onyx Durability",
+    "color": "dark_gray",
+    "bold": true
+  },
+  "effects": {
+    "minecraft:item_damage": [
+      {
+        "requirements": {
+          "condition": "minecraft:random_chance",
+          "chance": 0.25
+        },
+        "effect": {
+          "type": "minecraft:set",
+          "value": 0
+        }
+      }
+    ]
+  },
+  "max_cost": {
+    "base": 0,
+    "per_level_above_first": 0
+  },
+  "max_level": 1,
+  "min_cost": {
+    "base": 0,
+    "per_level_above_first": 0
+  },
+  "slots": [
+    "any"
+  ],
+  "supported_items": "#minecraft:enchantable/durability",
+  "weight": 1
+}

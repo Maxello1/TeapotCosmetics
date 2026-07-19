@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.minecraft.resource.ResourceType;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.text.Text;
 import net.minecraft.util.math.BlockPos;
 import net.sidetopia.cosmetics.commands.JewelingCommands;
 import net.sidetopia.cosmetics.compat.KnowledgeBoundBridge;
@@ -34,7 +35,13 @@ public final class JewelingTableManager {
             ServerWorld world,
             BlockPos tablePos
     ) {
-        new JewelingTableGui(player, world, tablePos).open();
+        JewelingTableGui gui = new JewelingTableGui(player, world, tablePos);
+        if (gui.open() && RECIPES.isEmpty()) {
+            player.sendMessage(
+                    Text.literal(JewelingConfig.get().messages.noRecipesLoaded),
+                    true
+            );
+        }
     }
 
     public static JewelingRecipeRegistry recipes() {

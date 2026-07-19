@@ -1,0 +1,31 @@
+{
+  "anvil_cost": 0,
+  "description": {
+    "text": "Celestite Clarity",
+    "color": "aqua",
+    "bold": true
+  },
+  "max_cost": {
+    "base": 0,
+    "per_level_above_first": 0
+  },
+  "max_level": 1,
+  "min_cost": {
+    "base": 0,
+    "per_level_above_first": 0
+  },
+  "slots": [
+    "head"
+  ],
+  "supported_items": [
+    "minecraft:chainmail_helmet",
+    "minecraft:diamond_helmet",
+    "minecraft:golden_helmet",
+    "minecraft:iron_helmet",
+    "minecraft:leather_helmet",
+    "minecraft:netherite_helmet",
+    "minecraft:turtle_helmet"
+  ],
+  "weight": 1,
+  "effects": {}
+}

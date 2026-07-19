@@ -1,0 +1,39 @@
+{
+  "criteria": {
+    "feed": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:pufferfish",
+            "minecraft:tropical_fish",
+            "minecraft:chicken",
+            "minecraft:cod",
+            "minecraft:mutton",
+            "minecraft:salmon",
+            "minecraft:beef",
+            "minecraft:porkchop",
+            "minecraft:rabbit",
+            "minecraft:rotten_flesh",
+            "minecraft:cooked_cod",
+            "minecraft:cooked_rabbit",
+            "minecraft:cooked_chicken",
+            "minecraft:cooked_beef",
+            "minecraft:cooked_mutton",
+            "minecraft:cooked_salmon",
+            "minecraft:cooked_porkchop",
+            "minecraft:rabbit_stew"
+          ]
+        },
+        "entity": {
+          "type": "#sidetopia:can_hunger",
+          "nbt": "{Tags:[\"owned_by_someone\"]}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "sidetopia:detection/feed_detected"
+  },
+  "sends_telemetry_event": false
+}

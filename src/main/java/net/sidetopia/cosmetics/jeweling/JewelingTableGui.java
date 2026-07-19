@@ -99,7 +99,68 @@ public final class JewelingTableGui extends SimpleGui {
             handleResultClick(ClickType.MOUSE_LEFT_SHIFT);
             return ItemStack.EMPTY;
         }
-        return super.quickMove(index);
+
+        Slot source = getSlotRedirectOrPlayer(index);
+        if (source == null || !source.hasStack()) {
+            return ItemStack.EMPTY;
+        }
+
+        if (index == JEWEL_SLOT || index == EQUIPMENT_SLOT) {
+            return moveInputToPlayer(source);
+        }
+        if (index < getVirtualSize()) {
+            return ItemStack.EMPTY;
+        }
+        return movePlayerStackToInput(source);
+    }
+
+    private ItemStack moveInputToPlayer(Slot source) {
+        ItemStack moving = source.getStack();
+        ItemStack original = moving.copy();
+        if (!insertItem(
+                moving,
+                getVirtualSize(),
+                getVirtualSize() + 36,
+                true
+        )) {
+            return ItemStack.EMPTY;
+        }
+        finishQuickMove(source);
+        return original;
+    }
+
+    private ItemStack movePlayerStackToInput(Slot source) {
+        ItemStack moving = source.getStack();
+        ItemStack original = moving.copy();
+
+        if (JewelingInputRules.isJewelInput(moving)) {
+            Slot jewelSlot = getSlotRedirect(JEWEL_SLOT);
+            if (jewelSlot == null
+                    || !insertItem(moving, JEWEL_SLOT, JEWEL_SLOT + 1, false)) {
+                return ItemStack.EMPTY;
+            }
+        } else if (JewelingInputRules.isEquipmentInput(moving)) {
+            Slot equipmentSlot = getSlotRedirect(EQUIPMENT_SLOT);
+            if (equipmentSlot == null
+                    || equipmentSlot.hasStack()
+                    || !equipmentSlot.canInsert(moving)) {
+                return ItemStack.EMPTY;
+            }
+            equipmentSlot.setStack(moving.split(1));
+        } else {
+            return ItemStack.EMPTY;
+        }
+
+        finishQuickMove(source);
+        return original;
+    }
+
+    private static void finishQuickMove(Slot source) {
+        if (source.getStack().isEmpty()) {
+            source.setStack(ItemStack.EMPTY);
+        } else {
+            source.markDirty();
+        }
     }
 
     @Override
@@ -316,8 +377,7 @@ public final class JewelingTableGui extends SimpleGui {
 
         @Override
         public boolean canInsert(ItemStack stack) {
-            return stack.isIn(JewelingTags.jewels())
-                    && JewelingTableManager.recipes().hasRecipeFor(stack);
+            return JewelingInputRules.isJewelInput(stack);
         }
     }
 
@@ -328,9 +388,7 @@ public final class JewelingTableGui extends SimpleGui {
 
         @Override
         public boolean canInsert(ItemStack stack) {
-            return stack.getCount() == 1
-                    && stack.isIn(JewelingTags.jewelable())
-                    && JewelingTableManager.recipes().matchesAnyEquipment(stack);
+            return JewelingInputRules.isEquipmentInput(stack);
         }
 
         @Override

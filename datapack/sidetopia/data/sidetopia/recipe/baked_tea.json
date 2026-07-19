@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0,
+  "ingredient": {
+    "item": "minecraft:nether_wart"
+  },
+  "result": {
+    "id": "minecraft:nether_wart",
+    "components": {
+      "minecraft:custom_data": {
+        "kb_id": "baked_tea"
+      },
+      "minecraft:custom_model_data": 1,
+      "minecraft:custom_name": "{\"text\":\"Baked Tea\",\"italic\":false,\"color\":\"white\"}"
+    }
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "exclusive_set": "#sidetopia:exclusive_set/explosive_arrow",
+  "anvil_cost": 0,
+  "description": {
+    "text": "Cinnabar Explosive",
+    "color": "dark_red",
+    "bold": true
+  },
+  "max_cost": {
+    "base": 0,
+    "per_level_above_first": 0
+  },
+  "max_level": 1,
+  "min_cost": {
+    "base": 0,
+    "per_level_above_first": 0
+  },
+  "slots": [
+    "mainhand"
+  ],
+  "supported_items": "#minecraft:enchantable/crossbow",
+  "weight": 1,
+  "effects": {
+    "minecraft:post_attack": [
+      {
+        "requirements": {
+          "condition": "minecraft:random_chance",
+          "chance": 0.3
+        },
+        "effect": {
+          "type": "minecraft:explode",
+          "attribute_to_user": true,
+          "damage_type": "minecraft:explosion",
+          "knockback_multiplier": 1,
+          "offset": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "radius": 2,
+          "create_fire": false,
+          "block_interaction": "none",
+          "small_particle": {
+            "type": "minecraft:explosion"
+          },
+          "large_particle": {
+            "type": "minecraft:explosion_emitter"
+          },
+          "sound": "minecraft:entity.generic.explode"
+        },
+        "enchanted": "attacker",
+        "affected": "damaging_entity"
+      }
+    ],
+    "minecraft:hit_block": [
+      {
+        "requirements": {
+          "condition": "minecraft:random_chance",
+          "chance": 0.3
+        },
+        "effect": {
+          "type": "minecraft:explode",
+          "attribute_to_user": true,
+          "damage_type": "minecraft:explosion",
+          "knockback_multiplier": 1,
+          "offset": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "radius": 2,
+          "create_fire": false,
+          "block_interaction": "none",
+          "small_particle": {
+            "type": "minecraft:explosion"
+          },
+          "large_particle": {
+            "type": "minecraft:explosion_emitter"
+          },
+          "sound": "minecraft:entity.generic.explode"
+        }
+      }
+    ]
+  }
+}

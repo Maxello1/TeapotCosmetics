@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:gold_nugget"
+    },
+    "X": {
+      "item": "minecraft:nether_wart"
+    }
+  },
+  "pattern": [
+    "###",
+    "#X#",
+    "###"
+  ],
+  "result": {
+    "components": {
+      "minecraft:custom_name": "{\"text\":\"Yorkshire Gold\",\"italic\":false,\"color\":\"gold\"}",
+      "minecraft:custom_model_data": 2,
+      "minecraft:custom_data": {
+        "kb_id": "gold_tea"
+      }
+    },
+    "count": 1,
+    "id": "minecraft:nether_wart"
+  }
+}

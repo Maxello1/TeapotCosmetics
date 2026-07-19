@@ -1,0 +1,11 @@
+tag @s add sf_tired2
+tag @s remove sf_tired
+tag @s remove sf_tired3
+tag @s remove sf_have_sleeped
+attribute @s minecraft:generic.movement_speed modifier remove sleepfatige:speed_debuff
+attribute @s minecraft:generic.movement_speed modifier remove sleepfatige:attack_speed_debuff
+attribute @s minecraft:generic.movement_speed modifier remove sleepfatige:damage_debuff
+attribute @s minecraft:generic.movement_speed modifier remove sleepfatige:block_break_debuff
+execute as @s[tag=!celestite_clarity] run function sidetopia:features/sleep_stuff/tiredness/tired_normal_2
+execute as @s[tag=celestite_clarity] run function sidetopia:features/sleep_stuff/tiredness/tired_celestite_2
+effect give @s minecraft:darkness 60 1 true

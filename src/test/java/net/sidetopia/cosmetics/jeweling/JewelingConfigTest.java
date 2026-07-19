@@ -4,6 +4,7 @@ import net.minecraft.util.Identifier;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 class JewelingConfigTest {
@@ -29,6 +30,20 @@ class JewelingConfigTest {
         assertEquals(1.0F, config.successSoundVolume);
         assertEquals(1.0F, config.successSoundPitch);
         assertNotNull(config.messages);
+    }
+
+    @Test
+    void normalizesNoRecipesLoadedMessageAndKeepsOperatorBypassDisabled() {
+        JewelingConfig config = new JewelingConfig();
+        config.messages.noRecipesLoaded = " ";
+
+        config.normalize();
+
+        assertEquals(
+                "No Jeweling recipes are loaded. Ask an administrator to check the datapack.",
+                config.messages.noRecipesLoaded
+        );
+        assertFalse(config.bypassKnowledgeBoundForOperators);
     }
 
     @Test

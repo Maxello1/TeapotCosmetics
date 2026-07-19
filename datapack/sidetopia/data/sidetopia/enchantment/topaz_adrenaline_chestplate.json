@@ -1,0 +1,42 @@
+{
+  "anvil_cost": 0,
+  "description": {
+    "text": "Topaz Adrenaline",
+    "color": "gold",
+    "bold": true
+  },
+  "effects": {
+    "minecraft:location_changed": [
+      {
+        "requirements": {
+          "condition": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "player_health": {
+              "min": 0,
+              "max": 8
+            }
+          }
+        },
+        "effect": {
+          "type": "minecraft:run_function",
+          "function": "sidetopia:features/gem/gem_stuff/topaz/chestplate"
+        }
+      }
+    ]
+  },
+  "max_cost": {
+    "base": 0,
+    "per_level_above_first": 0
+  },
+  "max_level": 1,
+  "min_cost": {
+    "base": 0,
+    "per_level_above_first": 0
+  },
+  "slots": [
+    "chest"
+  ],
+  "supported_items": "#minecraft:enchantable/chest_armor",
+  "weight": 1
+}

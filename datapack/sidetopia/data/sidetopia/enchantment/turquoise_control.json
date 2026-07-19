@@ -1,0 +1,92 @@
+{
+	"anvil_cost": 0,
+	"description": {
+		"text": "Turquoise Control",
+		"color": "aqua",
+		"bold": true
+	},
+	"effects": {
+		"minecraft:projectile_count": [
+			{
+				"requirements": {
+					"condition": "minecraft:entity_scores",
+					"entity": "this",
+					"scores": {
+						"pitch": {
+							"min": -50,
+							"max": 50
+						}
+					}
+				},
+				"effect": {
+					"type": "minecraft:add",
+					"value": 2
+				}
+			}
+		],
+		"minecraft:projectile_spread": [
+			{
+				"requirements": {
+					"condition": "minecraft:entity_scores",
+					"entity": "this",
+					"scores": {
+						"pitch": {
+							"min": -18,
+							"max": 18
+						}
+					}
+				},
+				"effect": {
+					"type": "minecraft:add",
+					"value": 20
+				}
+			},
+			{
+				"requirements": {
+					"condition": "minecraft:entity_scores",
+					"entity": "this",
+					"scores": {
+						"pitch": {
+							"min": 19,
+							"max": 50
+						}
+					}
+				},
+				"effect": {
+					"type": "minecraft:add",
+					"value": 30
+				}
+			},
+			{
+				"requirements": {
+					"condition": "minecraft:entity_scores",
+					"entity": "this",
+					"scores": {
+						"pitch": {
+							"min": -50,
+							"max": -19
+						}
+					}
+				},
+				"effect": {
+					"type": "minecraft:add",
+					"value": 30
+				}
+			}
+		]
+	},
+	"max_cost": {
+		"base": 0,
+		"per_level_above_first": 0
+	},
+	"max_level": 1,
+	"min_cost": {
+		"base": 0,
+		"per_level_above_first": 0
+	},
+	"slots": [
+		"mainhand"
+	],
+	"supported_items": "#minecraft:enchantable/bow",
+	"weight": 1
+}

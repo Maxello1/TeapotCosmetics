@@ -1,0 +1,1 @@
+effect clear @s[scores={food=0..15,rest=1..100}] minecraft:hunger

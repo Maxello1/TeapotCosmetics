@@ -1,0 +1,79 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "X": {
+      "item": "minecraft:stick"
+    },
+    "A": {
+      "item": "minecraft:iron_block"
+    },
+    "B": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    "  B",
+    " A ",
+    "X  "
+  ],
+  "result": {
+    "components": {
+      "minecraft:custom_name": "{\"text\":\"Lance\",\"italic\":false,\"color\":\"white\"}",
+      "minecraft:lore": [
+        "{ \"text\":\"\"}",
+        "{\"text\":\"When in Main Hand:\",\"color\":\"gray\",\"italic\":false}",
+        "{\"text\":\" 10 Attack Damage\",\"color\":\"dark_green\",\"italic\":false}",
+        "{\"text\":\" 1.2 Attack Speed\",\"color\":\"dark_green\",\"italic\":false}",
+        "{\"text\":\" +2 Reach\",\"color\":\"dark_green\",\"italic\":false}",
+        "{\"text\":\" -0.03 Movement Speed\",\"color\":\"dark_red\",\"italic\":false}"
+      ],
+      "minecraft:attribute_modifiers": {
+        "modifiers": [
+          {
+            "type": "minecraft:player.entity_interaction_range",
+            "id": "minecraft:lance",
+            "amount": 2,
+            "operation": "add_value"
+          },
+          {
+            "type": "minecraft:generic.movement_speed",
+            "id": "minecraft:lance",
+            "amount": -0.03,
+            "operation": "add_value",
+            "slot": "mainhand"
+          },
+          {
+            "type": "minecraft:generic.movement_speed",
+            "id": "minecraft:lance_1",
+            "amount": -0.03,
+            "operation": "add_value",
+            "slot": "offhand"
+          },
+          {
+            "type": "minecraft:generic.attack_speed",
+            "id": "minecraft:lance",
+            "amount": -2.8,
+            "operation": "add_value",
+            "slot": "mainhand"
+          },
+          {
+            "type": "minecraft:generic.attack_damage",
+            "id": "minecraft:lance",
+            "amount": 9,
+            "operation": "add_value",
+            "slot": "mainhand"
+          }
+        ],
+        "show_in_tooltip": false
+      },
+      "minecraft:max_damage": 875,
+      "minecraft:custom_data": {
+        "kb_id": "lance"
+      },
+      "minecraft:custom_model_data": 1
+    },
+    "count": 1,
+    "id": "minecraft:iron_axe"
+  }
+}

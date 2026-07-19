@@ -1,0 +1,62 @@
+{
+  "primary_items": [],
+  "anvil_cost": 0,
+  "description": {
+    "text": "Opal",
+    "extra": [
+      {
+        "text": " Gu",
+        "color": "#ff99da",
+        "bold": true
+      },
+      {
+        "text": "ar",
+        "color": "#5fc88d",
+        "bold": true
+      },
+      {
+        "text": "dian",
+        "color": "#d6ff66",
+        "bold": true
+      }
+    ],
+    "color": "white",
+    "bold": true
+  },
+  "effects": {
+    "minecraft:attributes": [
+      {
+        "attribute": "minecraft:generic.armor",
+        "id": "sidetopia:opal_guardian",
+        "amount": 4,
+        "operation": "add_value"
+      },
+     {
+        "attribute": "minecraft:generic.attack_damage",
+        "id": "sidetopia:opal_guardian",
+        "amount": -0.1,
+        "operation": "add_multiplied_total"
+      },
+      {
+        "attribute": "minecraft:generic.movement_speed",
+        "id": "sidetopia:opal_guardian",
+        "amount": -0.3,
+        "operation": "add_multiplied_total"
+      }
+    ]
+  },
+  "max_cost": {
+    "base": 0,
+    "per_level_above_first": -1
+  },
+  "max_level": 1,
+  "min_cost": {
+    "base": 0,
+    "per_level_above_first": 0
+  },
+  "slots": [
+    "mainhand"
+  ],
+  "supported_items": "minecraft:shield",
+  "weight": 1
+}

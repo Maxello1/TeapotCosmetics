@@ -1,0 +1,108 @@
+{
+  "carvers": {
+    "air": [
+      "minecraft:canyon",
+      "minecraft:cave",
+      "minecraft:cave_extra_underground"
+    ]
+  },
+  "downfall": 0,
+  "effects": {
+    "additions_sound": {
+      "sound": "minecraft:ambient.basalt_deltas.additions",
+      "tick_chance": 0.0111
+    },
+    "ambient_sound": "minecraft:ambient.basalt_deltas.loop",
+    "fog_color": 4671303,
+    "mood_sound": {
+      "block_search_extent": 8,
+      "offset": 2,
+      "sound": "minecraft:ambient.basalt_deltas.mood",
+      "tick_delay": 6000
+    },
+    "music": {
+      "max_delay": 24000,
+      "min_delay": 12000,
+      "replace_current_music": false,
+      "sound": "minecraft:music.nether.basalt_deltas"
+    },
+    "particle": {
+      "options": {
+        "type": "minecraft:white_ash"
+      },
+      "probability": 0.118093334
+    },
+    "sky_color": 8225415,
+    "water_color": 3291981,
+    "water_fog_color": 986896
+  },
+  "features": [],
+  "has_precipitation": false,
+  "spawn_costs": {
+    "minecraft:wither_skeleton": {
+      "energy_budget": 3,
+      "charge": 1
+    },
+    "minecraft:blaze": {
+      "energy_budget": 4,
+      "charge": 1
+    },
+    "minecraft:zoglin": {
+      "energy_budget": 2,
+      "charge": 1
+    }
+  },
+  "spawners": {
+    "monster": [
+      {
+        "type": "minecraft:zoglin",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "minecraft:blaze",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 3
+      },
+      {
+        "type": "minecraft:wither_skeleton",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 2
+      },
+      {
+        "type": "minecraft:stray",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 3
+      },
+      {
+        "type": "minecraft:husk",
+        "weight": 1,
+        "minCount": 2,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:cave_spider",
+        "weight": 1,
+        "minCount": 2,
+        "maxCount": 3
+      },
+      {
+        "type": "minecraft:zombified_piglin",
+        "weight": 3,
+        "minCount": 2,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:magma_cube",
+        "weight": 2,
+        "minCount": 1,
+        "maxCount": 3
+      }
+    ]
+  },
+  "temperature": 2
+}

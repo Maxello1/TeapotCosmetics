@@ -1,0 +1,1 @@
+scoreboard players add @s heat_amount 2

@@ -25,6 +25,14 @@ public final class JewelingRecipeRegistry {
         return snapshot.all();
     }
 
+    public boolean isEmpty() {
+        return snapshot.all().isEmpty();
+    }
+
+    public int size() {
+        return snapshot.all().size();
+    }
+
     public boolean hasRecipeFor(ItemStack jewel) {
         return !find(jewel).isEmpty();
     }

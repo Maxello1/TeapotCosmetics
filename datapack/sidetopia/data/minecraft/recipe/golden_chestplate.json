@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "X": {
+      "item": "minecraft:copper_ingot"
+    }
+  },
+  "pattern": [
+    "X X",
+    "XXX",
+    "XXX"
+  ],
+  "result": {
+    "components": {
+      "minecraft:custom_name": "{\"text\":\"Copper Chestplate\",\"italic\":false,\"color\":\"white\"}",
+      "minecraft:attribute_modifiers": {
+        "modifiers": [
+          {
+            "type": "minecraft:generic.armor",
+            "id": "minecraft:golden_chestplate",
+            "amount": 4,
+            "operation": "add_value",
+            "slot": "chest"
+          }
+        ]
+      },
+      "minecraft:hide_additional_tooltip": {},
+      "minecraft:max_damage": 176
+    },
+    "count": 1,
+    "id": "minecraft:golden_chestplate"
+  }
+}

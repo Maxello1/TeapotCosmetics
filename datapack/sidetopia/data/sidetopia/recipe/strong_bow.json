@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "show_notification": false,
+  "category": "equipment",
+  "key": {
+    "#": {
+      "tag": "minecraft:fences"
+    },
+    "X": {
+      "item": "minecraft:lead"
+    },
+    "B": {
+      "tag": "minecraft:logs"
+    },
+    "A": {
+      "item": "minecraft:string"
+    }
+  },
+  "pattern": [
+    " BA",
+    "# X",
+    " BA"
+  ],
+  "result": {
+    "components": {
+      "minecraft:custom_name": "{\"text\":\"Strong Bow\",\"italic\":false,\"color\":\"white\"}",
+      "minecraft:custom_data": {
+        "kb_id": "strong_bow"
+      },
+      "minecraft:max_damage": 768,
+      "minecraft:custom_model_data": 1,
+      "minecraft:enchantments": {
+        "levels": {
+          "sidetopia:strong_bow": 1
+        }
+      }
+    },
+    "count": 1,
+    "id": "minecraft:bow"
+  }
+}
